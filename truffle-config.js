@@ -20,7 +20,7 @@
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // var HDWalletProvider = require("truffle-hdwallet-provider");
-var mnemonic = "supply injury box praise mobile kid alley sugar trophy race nerve business";
+var mnemonic = "ocean elbow casino reflect nut between left settle trouble once wife argue";
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 module.exports = {
@@ -41,11 +41,11 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    // rinkeby: {
-    //   host: "127.0.0.1",     // Localhost (default: none)
-    //   port: 7545,            // Standard Ethereum port (default: none)
-    //   network_id: "*",       // Any network (default: none)
-    //  },
+    rinkeby: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+     },
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
@@ -59,7 +59,7 @@ module.exports = {
     // NB: It's important to wrap the provider as a function.
     rinkeby: {
       provider: function() { 
-       return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/83df3d91cacd488b8756d0626232b3dc");
+       return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/efe76c21760448f99dcd2adfcd42bd41");
       },
       network_id: 4,
       gas: 4500000,

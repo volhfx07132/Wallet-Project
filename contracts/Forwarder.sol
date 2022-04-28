@@ -50,11 +50,11 @@ contract Forwarder {
   function flushTokens(address tokenContractAddress) public {
     IERC20 instance = IERC20(tokenContractAddress);
     uint256 forwarderBalance = instance.balanceOf(address(this));
-    if (forwarderBalance == 0) {
-      revert();
+    if (forwarderBalance == 0) {s
+      revert("Error forwarderBalance equal 0");
     }
     if (!instance.transfer(destination, forwarderBalance)) {
-      revert();
+      revert("Error transder failed");
     }
     emit TokensFlushed(address(this), forwarderBalance, tokenContractAddress);
   }
